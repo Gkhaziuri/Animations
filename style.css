@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+.text {
+    margin-top: 500px;
+    width: 500px;
+    height: 500px;
+    background-color: antiquewhite;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  .text:hover {
+    background-color: green;
+    width: 700px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+  }
+  
+  .animation1 {
+    height: 500px;
+    width: 500px;
+
+    position: absolute;
+    animation-name: Animation1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes Animation1 {
+    20% {
+        left:10px;
+        top: 10px;
+        background-image: url(images/stadium1.jpg);
+        border-radius: 50%;
+    }
+    40% {
+        left: 100px;
+        top: 100px;
+        border-radius: 0;
+        background-image: url(images/stadium2.jpg);
+    }
+    60% {
+        top: 100px;
+        left: 720px;
+        border-radius: 0;
+    }
+    80% {
+        top: 100px;
+        right: 100px;
+        border-radius: 0;
+        background-image: url(images/stadium3.jpg);
+    }
+    100% {
+        top: 10px;
+        right: 10px;
+        border-radius: 50%;
+        background-image: url(images/stadium4.jpeg);
+    }
+}
+
+.animation2 {
+    width: 200px;
+    height: 200px;
+
+    position: absolute;
+    animation-name: Animation2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes Animation2{
+    20% {
+        right:10px;
+        bottom: 10px;
+        background-color: #b30000;
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    }
+    40% {
+        right: 100px;
+        bottom: 100px;
+        background-color: blue;
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+        transform: rotate(45deg);
+    }
+    60% {
+        bottom: 100px;
+        left: 720px;
+        background-color: blue;
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+        transform: rotate(90deg);
+    }
+    80% {
+        bottom: 100px;
+        left: 100px;
+        background-color: blue;
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+        transform: rotate(180deg);
+     
+    }
+    100% {
+        bottom: 10px;
+        left: 10px;
+        background-color: #b30000;
+        clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+        transform: rotate(360deg);
+    }
+}
